@@ -54,40 +54,36 @@ const Homepage = () => {
   };
 
   const projects = {
-    "TDSB Homework Management Interface": {
-      desc: "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
-      techStack: "Python (Flask), Vue.js, Bootstrap, SQL",
-      link: "https://github.com/gazijarin/TDSBHomeworkManagement",
-      open: "https://tdsb-app.herokuapp.com/",
+    "Dynamic Subway Information System": {
+      desc: "A Java application that simulates subway screens with real-time train data and advertisements.",
+      techStack: "Java, MySQL",
+      link: "https://github.com/debodam/Dynamic-Subway-Information-System",
     },
-    "Adam A.I.": {
-      desc: "A self-learning A.I. that learns to traverse through a complex maze using the genetic algorithm.",
-      techStack: "Javascript, HTML / CSS",
-      link: "https://github.com/gazijarin/adamai",
-      open: "https://gazijarin.github.io/AdamAI/",
+    TinyThreads: {
+      desc: "A full-stack children’s clothing donation and trading market application.",
+      techStack:
+        "React.js, Flask, AWS DynamoDB, Cloudinary,  OpenAI ChatGPT-4 Vision",
+      link: "https://github.com/ParsaKargari/HTC-2023",
     },
-    "Distributed Logging and Monitoring System": {
-      desc: "A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.",
-      techStack: "Node.js (Express.js), React.js, PostgreSQL",
-      link: "https://github.com/gazijarin/Distributed-Logging-and-Monitoring-System",
+    DriveAwake: {
+      desc: "A driving assistance application that measures EOG signals to alert users when they feel sleepy.",
+      techStack: "React.js, Flask, C",
+      link: "https://github.com/debodam/nathacks2023",
     },
-    "Odin Bot": {
-      desc: "A Telegram bot that helps you excel on your daily tasks through Node NLP.",
-      techStack: "Javascript, Node.js, Natural NLP, Telegram API",
-      link: "https://github.com/gazijarin/OdinBot",
-      open: "",
+    "Disaster Relief System": {
+      desc: "A Java application that manages the data of disaster victims.",
+      techStack: "Java, MySQL",
+      link: "https://github.com/debodam/Disaster-Relief-System",
     },
-    "Game Centre": {
-      desc: "An Android app consisting of three board games, including multiplayer, autosave, user authentication, etc.",
-      techStack: "Java, Android Studio",
-      link: "https://github.com/gazijarin/gamecentre",
-      open: "",
+    "Museum Management System": {
+      desc: "A management system for a musuem that keeps track of artists and their art.",
+      techStack: "Python, SQL",
+      link: "https://github.com/debodam/Museum-Management-System",
     },
-    "Minimax Stonehenge": {
-      desc: "Two-player, zero-sum game with a strategic Minimax artificial intelligence.",
+    "Arduino Automatic Garden Program": {
+      desc: "A self-automated garden system that tracks soil moisture and temperature",
       techStack: "Python",
-      link: "https://github.com/gazijarin/stonehenge",
-      open: "",
+      link: "https://github.com/debodam/Automated-Indoor-Garden-Arduino-Code",
     },
   };
 
