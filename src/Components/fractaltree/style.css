@@ -1,15 +1,15 @@
-#fractal-snowflake {
+#fractal-tree {
   padding-bottom: 20px;
 }
 
-#fractal-snowflake .p5Canvas {
-  width: 250px !important;
-  height: 100% !important;
+#fractal-tree .p5Canvas {
+  width: 150px !important; /* Smaller canvas size */
+  height: auto !important;
 }
 
 @media only screen and (max-width: 600px) {
-  #fractal-snowflake .p5Canvas {
-    width: 150px !important;
-    height: 100% !important;
+  #fractal-tree .p5Canvas {
+    width: 100px !important; /* Smaller canvas size for mobile */
+    height: auto !important;
   }
 }

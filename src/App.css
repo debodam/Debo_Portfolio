@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 /* Animation */
 
 .fade-in-section {
@@ -18,7 +24,6 @@ html {
 }
 
 .App {
-  font-family: "NTR";
   display: flex;
   margin: auto;
 }
@@ -26,22 +31,27 @@ html {
 .section-header {
   display: flex;
   padding-bottom: 42px;
-  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: 1000px; /* Match the width of the about section */
+  margin: 0 auto; /* Center the section */
+  box-sizing: border-box;
 }
 
 .section-header::after {
   content: "";
   display: block;
   width: 300px;
-  margin-top: 39px;
   height: 1px;
+  margin-top: 39px;
   margin-left: 20px;
-  background-color: var(--lightest-navy);
+  background-color: #76abae; /* Match the section title color */
 }
 
 .section-title {
-  font-family: "NTR", sans-serif;
-  color: var(--lightest-slate);
+  color: #76abae;
   font-size: 46px;
   font-weight: bold;
+  margin: 0;
 }

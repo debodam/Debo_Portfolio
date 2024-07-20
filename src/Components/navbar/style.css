@@ -1,0 +1,101 @@
+.header {
+  position: fixed;
+  height: 60px; /* Reduced height */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.3s ease-in;
+  background-color: #eeeeee;
+  font-family: var(--font-family);
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: auto;
+  height: 100%;
+  padding: 0 2rem; /* Reduced padding on sides */
+}
+
+.header .nav-menu {
+  display: flex;
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.header .nav-menu a {
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.header .navbar img {
+  width: 150px; /* Adjusted width */
+  height: auto;
+}
+
+.header .nav-item {
+  padding: 0.5rem; /* Reduced padding */
+  font-weight: 500;
+}
+
+.header .nav-item a:hover {
+  padding-bottom: 8px; /* Adjusted padding */
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 940px) {
+  .header {
+    background-color: transparent; /* No background color for mobile */
+  }
+
+  .header .navbar {
+    max-width: 100%;
+    padding: 0 1rem; /* Maintain padding on sides for mobile */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px; /* Adjusted top position */
+    flex-direction: column;
+    background-color: transparent; /* No background color */
+    width: 100%;
+    height: 90vh;
+    z-index: 999;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1.5rem 0;
+  }
+
+  .header .navbar img {
+    width: 120px; /* Adjusted width for mobile */
+  }
+}
+
+.code-by-debo {
+  color: black; /* Change text color to black */
+  text-decoration: none; /* Remove underline */
+}
+
+.logo {
+  text-decoration: none; /* Ensure no underline on link */
+}
