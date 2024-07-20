@@ -4,6 +4,11 @@ body {
   background-color: #eeeeee;
   margin: 0;
   padding: 0;
+  font-family: var(--font-family);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* WebKit (Chrome, Safari, etc.) */
 }
 
 .section {
@@ -154,6 +159,22 @@ body {
   padding-left: 40px;
 }
 
+.about-description li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--slate);
+  display: flex;
+  align-items: center;
+}
+
+.about-description li::before {
+  content: "▹    ";
+  color: #76abae;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
 .about-image img {
   max-width: 300px;
   height: auto;
@@ -179,8 +200,152 @@ body {
 
 .tech-stack li::before {
   content: "▹    ";
+  color: #76abae;
   position: absolute;
   left: 0;
   font-size: 22px; /* Adjust size of the symbol */
   line-height: 1.5;
+  font-weight: bold;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.highlight-1 {
+  color: #76abae;
+}
+
+.highlight-2 {
+  color: #31363f;
+}
+
+/* Projects Section */
+#projects {
+  min-height: 50vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+/* Spotlight carousel */
+.carousel.slide {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.carousel-inner {
+  position: relative; /* Ensures child elements can be positioned absolutely */
+  height: 500px; /* Ensure consistent height */
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  overflow: hidden; /* Prevents content from spilling out */
+}
+
+.carousel-item {
+  position: relative; /* Ensures the caption can be absolutely positioned inside */
+}
+
+.carousel img {
+  object-fit: cover; /* Adjust image to cover the carousel item */
+  height: 100%; /* Ensure images fill the height */
+  width: 100%; /* Ensure images fill the width */
+  opacity: 0.5; /* Optional opacity */
+}
+
+/* Centering caption inside the carousel-item */
+.carousel-caption {
+  position: absolute; /* Absolute positioning to center within the carousel-item */
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centers the caption horizontally and vertically */
+  text-align: center; /* Center text alignment */
+  color: white; /* Ensure text is visible against background */
+  padding: 1rem; /* Optional padding */
+  max-width: 80%; /* Restricts width for better readability */
+  width: 100%; /* Ensure full width */
+}
+
+.carousel-item-custom {
+  position: relative; /* Set positioning context for the carousel-inner */
+}
+
+.carousel-inner {
+  position: relative; /* Set positioning context for carousel-content */
+}
+
+.carousel-content {
+  position: absolute; /* Position absolutely within carousel-inner */
+  bottom: 0; /* Align to the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  text-align: center; /* Center text inside the content */
+  width: 100%; /* Full width for carousel-content */
+  padding: 20px; /* Add padding */
+  color: white; /* Text color */
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+  padding-bottom: 5rem;
+}
+
+.carousel-content h3 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #31363f; /* Text color */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); /* Outline effect */
+}
+
+/* Style for images inside the carousel */
+.carousel-item img {
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  opacity: 0.5; /* Ensure images are fully visible */
+}
+
+.carousel-content p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #31363f; /* Text color */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); /* Outline effect */
+}
+
+.carousel-content .techStack {
+  display: block;
+  font-size: 14px;
+  color: #76abae;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); /* Outline effect */
+}
+
+.carousel-content .external-links {
+  margin-top: 10px;
+}
+
+.carousel-caption p.techStack {
+  font-family: "NTR", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #76abae;
+}
+
+.carousel-indicators .active {
+  background-color: var(--green-bright);
+}
+
+@media only screen and (max-width: 600px) {
+  #projects {
+    height: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+  .carousel {
+    display: none; /* Hide carousel on small screens */
+  }
 }
