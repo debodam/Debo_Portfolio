@@ -2,7 +2,6 @@ import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import FolderOpenRoundedIcon from "@mui/icons-material/FolderOpenRounded";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import React from "react";
-import Carousel from "react-bootstrap/Carousel"; // Import Carousel
 import resume from "../../Assets/2024_Software_Engineering_Resume.pdf";
 import DriveAwake from "../../Assets/DriveAwake.png";
 import github from "../../Assets/github.png";
@@ -172,10 +171,10 @@ const Homepage = () => {
 
       {/* Projects Section */}
       <div id="projects">
-        <div className="section-header">
+        {/* <div className="section-header">
           <span className="section-title">/ spotlight projects</span>
-        </div>
-        <Carousel>
+        </div> */}
+        {/* <Carousel>
           {Object.keys(spotlightProjects).map((key, i) => (
             <Carousel.Item className="carousel-item-custom" key={i}>
               <div className="carousel-inner">
@@ -202,7 +201,7 @@ const Homepage = () => {
               </div>
             </Carousel.Item>
           ))}
-        </Carousel>
+        </Carousel> */}
 
         <div className="section-header">
           <span className="section-title">/ projects</span>

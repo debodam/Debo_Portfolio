@@ -28,7 +28,7 @@ class ExternalLinks extends React.Component {
           <GitHubIcon
             style={{
               fontSize: 30,
-              color: "black",
+              color: "white",
             }}
           />
         </a>

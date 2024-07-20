@@ -46,11 +46,11 @@ body {
   height: 1px;
   margin-top: 39px;
   margin-left: 20px;
-  background-color: #76abae; /* Match the section title color */
+  background-color: #36c2ce; /* Match the section title color */
 }
 
 .section-title {
-  color: #76abae;
+  color: #36c2ce;
   font-size: 46px;
   font-weight: bold;
   margin: 0;

@@ -6,7 +6,7 @@
   left: 0;
   z-index: 1;
   transition: 0.3s ease-in;
-  background-color: #eeeeee;
+  background-color: #24292e;
   font-family: var(--font-family);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .header .nav-menu a {
-  color: black; /* Text color */
+  color: #fafbfc; /* Text color */
   text-decoration: none; /* Remove underline */
 }
 
@@ -92,8 +92,10 @@
 }
 
 .code-by-debo {
-  color: black; /* Change text color to black */
+  color: #fafbfc; /* Change text color to black */
   text-decoration: none; /* Remove underline */
+  padding-bottom: 0; /* Remove bottom padding */
+  margin-bottom: 0; /* Remove bottom margin if needed */
 }
 
 .logo {

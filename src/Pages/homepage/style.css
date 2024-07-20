@@ -1,7 +1,7 @@
 /* HOMEPAGE SECTION */
 
 body {
-  background-color: #eeeeee;
+  background-color: #2b3137;
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
@@ -40,12 +40,12 @@ body::-webkit-scrollbar {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: black; /* Ensure text is visible against the fractal tree */
+  color: #fafbfc; /* Ensure text is visible against the fractal tree */
   padding: 0 2rem;
 }
 
 .hero_name {
-  color: #76abae;
+  color: #36c2ce;
 }
 
 .hero_h1 {
@@ -153,6 +153,7 @@ body::-webkit-scrollbar {
   max-width: 600px;
   font-size: 22px;
   margin: 0;
+  color: #ffffff;
 }
 
 .about-image {
@@ -162,14 +163,13 @@ body::-webkit-scrollbar {
 .about-description li {
   position: relative;
   padding-left: 30px;
-  color: var(--slate);
   display: flex;
   align-items: center;
 }
 
 .about-description li::before {
   content: "▹    ";
-  color: #76abae;
+  color: #36c2ce;
   font-size: 24px;
   font-weight: bold;
   margin-right: 10px;
@@ -200,7 +200,7 @@ body::-webkit-scrollbar {
 
 .tech-stack li::before {
   content: "▹    ";
-  color: #76abae;
+  color: #36c2ce;
   position: absolute;
   left: 0;
   font-size: 22px; /* Adjust size of the symbol */
@@ -213,11 +213,11 @@ body::-webkit-scrollbar {
 }
 
 .highlight-1 {
-  color: #76abae;
+  color: #36c2ce;
 }
 
 .highlight-2 {
-  color: #31363f;
+  color: #fafbfc;
 }
 
 /* Projects Section */
@@ -348,4 +348,74 @@ body::-webkit-scrollbar {
   .carousel {
     display: none; /* Hide carousel on small screens */
   }
+}
+
+/* Projects Cards */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-card {
+  border: 1px solid #24292e;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #24292e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #ffffff;
+}
+
+.projects-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.folder-icon {
+  display: flex;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.card-tech {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.card-tech a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.card-tech a:hover {
+  text-decoration: underline;
 }
