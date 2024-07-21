@@ -589,6 +589,11 @@ body::-webkit-scrollbar {
     padding-bottom: 2rem;
   }
 
+  .btn-1 {
+    background: #fff;
+    color: #000;
+  }
+
   .btn-1:hover,
   .btn-2:hover {
     cursor: pointer;
@@ -651,6 +656,10 @@ body::-webkit-scrollbar {
   margin: auto;
   max-width: 1000px;
   padding-top: 100px;
+}
+
+.MuiTabs-indicator {
+  background-color: #36c2ce !important; /* Your custom color here */
 }
 
 .joblist-job-title {
@@ -761,6 +770,14 @@ ul {
     padding-bottom: 1rem;
   }
 
+  .MuiTabs-indicator {
+    background-color: #36c2ce !important; /* Your custom color here */
+  }
+
+  .css-ttw4rn {
+    background-color: #36c2ce !important;
+  }
+
   .css-1aquho2-MuiTabs-indicator {
     background-color: #36c2ce !important;
   }
@@ -797,6 +814,10 @@ ul {
     padding-bottom: 10px;
   }
 
+  .MuiTypography-root {
+    padding-top: 2rem;
+  }
+
   .MuiTab-root {
     flex: 1 1 auto;
     min-width: 100px;
@@ -814,12 +835,11 @@ ul {
   flex-direction: column;
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
-  min-height: 100vh; /* Ensure it takes up full viewport height */
 }
 
 #contact .section-header {
   padding-top: 7rem;
-  padding-bottom: 0;
+  padding-bottom: 4rem;
 }
 
 .contact-container {
@@ -877,6 +897,11 @@ ul {
   border: none;
 }
 
+@media only screen and (max-width: 400px) {
+  .MuiTabs-indicator {
+    background-color: #36c2ce;
+  }
+}
 /* Responsive Styles */
 
 /* For screens with max-width 900px */
@@ -892,8 +917,9 @@ ul {
   .contact-container {
     align-items: center;
   }
-  .contact-form-header {
-    font-size: 16px; /* Adjust font size for smaller screens */
+  .contact-form-header h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    align-items: center;
   }
 
   .contact-form-container {
@@ -905,8 +931,8 @@ ul {
 @media only screen and (max-width: 450px) {
   #contact .section-header {
     padding-top: 30rem; /* Adjust padding for header */
-    text-align: left; /* Align header text to the left */
     width: 100%; /* Ensure it takes full width */
+    padding-left: 0;
   }
 
   .contact-form-header {

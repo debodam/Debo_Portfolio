@@ -210,9 +210,9 @@ const Homepage = () => {
       {/* Contact Section */}
       <FadeInSection>
         <div id="contact">
-          <div className="section-header">
+          {/* <div className="section-header">
             <span className="section-title">/ contact</span>
-          </div>
+          </div> */}
           <Contact />
         </div>
       </FadeInSection>

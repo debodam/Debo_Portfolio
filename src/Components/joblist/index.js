@@ -29,6 +29,9 @@ const TabsStyled = styled(Tabs)(({ theme }) => ({
   "&::-webkit-scrollbar-track": {
     color: "#36c2ce",
   },
+  "& .MuiTabs-indicator": {
+    backgroundColor: "#36c2ce", // Your custom color here
+  },
 }));
 
 function TabPanel(props) {
