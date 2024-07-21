@@ -699,6 +699,11 @@ body::-webkit-scrollbar {
 #experience .MuiTab-root {
   padding: 6px 20px;
 }
+
+.css-1aquho2-MuiTabs-indicator {
+  color: #36c2ce !important;
+}
+
 .MuiButtonBase-root:focus {
   color: #36c2ce !important;
 }
