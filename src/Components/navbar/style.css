@@ -1,10 +1,12 @@
+/* HEADER STYLES */
+
 .header {
   position: fixed;
   height: 60px; /* Reduced height */
+  z-index: 1000; /* High z-index value */
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
   transition: 0.3s ease-in;
   background-color: #24292e;
   font-family: var(--font-family);
@@ -39,7 +41,7 @@
 
 .header .nav-menu .nav-item a:hover {
   padding-bottom: 8px; /* Adjusted padding */
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 3px solid #36c2ce;
 }
 
 .hamburger {
@@ -69,15 +71,16 @@
     flex-direction: column;
     background-color: #24292e; /* Background color */
     width: 100%;
-    height: 90vh;
-    z-index: 999;
+    height: 100vh;
+    z-index: 1000; /* Ensure it covers the entire page */
     text-align: center;
     transition: 0.3s;
     padding-top: 1rem;
+    overflow: hidden; /* Hide content outside */
   }
 
   .nav-menu.active {
-    left: 0;
+    left: 0; /* Slide in from the left */
   }
 
   .nav-item {

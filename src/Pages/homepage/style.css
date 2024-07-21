@@ -19,6 +19,7 @@ body::-webkit-scrollbar {
 }
 
 .hero.section {
+  padding-top: 5rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -27,21 +28,25 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
-.fractal_tree_container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
 .hero_text {
-  position: relative;
-  z-index: 1;
+  position: relative; /* Ensure it's positioned correctly */
+  z-index: 1; /* Lower z-index value compared to header */
   text-align: center;
   color: #fafbfc; /* Ensure text is visible against the fractal tree */
   padding: 0 2rem;
+}
+
+.hero_pic_container {
+  display: flex; /* Use flexbox for the container */
+  align-items: center; /* Center the image horizontally */
+  justify-content: center; /* Center the image horizontally */
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any padding */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.hero_image {
+  width: 80%;
 }
 
 .hero_name {
@@ -55,7 +60,27 @@ body::-webkit-scrollbar {
 
 .hero_subheader {
   font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero_subheader_ideas {
+  color: #fafbfca1;
+  font-weight: bold;
+}
+
+.hero_subheader_reality {
+  color: #36c2ce;
+  font-weight: bold;
+}
+
+.custom-typing-effect .typing-effect__cursor {
+  color: #36c2ce !important; /* Apply your desired cursor color */
+}
+
+/* Ensure no additional cursors are added */
+.custom-typing-effect .typing-effect__cursor::after {
+  content: ""; /* Remove any additional cursor symbol */
 }
 
 .btn-container {
@@ -89,7 +114,7 @@ body::-webkit-scrollbar {
 }
 
 .btn-1:hover {
-  background: #fff;
+  background: #36c2ce;
   color: white;
 }
 
@@ -98,12 +123,8 @@ body::-webkit-scrollbar {
   color: white;
 }
 
-.btn-1:hover {
-  background: rgb(0, 0, 0);
-}
-
 .btn-2:hover {
-  background: #fff;
+  background: #36c2ce;
   color: #000;
 }
 
@@ -114,13 +135,17 @@ body::-webkit-scrollbar {
   margin-top: 1rem;
 }
 
+.cursor {
+  color: #36c2ce;
+}
+
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
 .file-icon {
-  margin-left: 0.1rem;
+  margin-left: 0.25 rem;
   padding-bottom: 0.2rem;
   font-size: 1.2rem;
   display: inline-flex;
@@ -133,6 +158,19 @@ body::-webkit-scrollbar {
   font-size: 1.2rem;
   display: inline-flex;
   vertical-align: middle;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #fff; /* Default icon color */
+  font-size: 35px; /* Adjust font size as needed */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Scale up on hover */
 }
 
 #about {
@@ -158,6 +196,10 @@ body::-webkit-scrollbar {
 
 .about-image {
   padding-left: 40px;
+}
+
+.about-image:hover {
+  transform: scale(1.05); /* Scale up on hover */
 }
 
 .about-description li {
@@ -478,6 +520,11 @@ body::-webkit-scrollbar {
     padding-top: 30%;
   }
 
+  #about .section-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .about-description {
     font-size: 18px;
   }
@@ -539,6 +586,10 @@ body::-webkit-scrollbar {
     text-align: center;
   }
 
+  .hero_pic_container {
+    padding-bottom: 2rem;
+  }
+
   .about-image img {
     display: none;
   }
@@ -596,7 +647,6 @@ body::-webkit-scrollbar {
 }
 
 .joblist-duration {
-  font-family: "NTR", sans-serif;
   font-size: 18px;
   color: #fafbfc;
   padding-top: 1.5rem;
@@ -704,12 +754,126 @@ ul {
 }
 
 #contact {
-  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 100vh; /* Ensure it takes up full viewport height */
 }
 
-/* Styles for smaller screens, such as iPhones */
-@media only screen and (max-width: 600px) {
+#contact .section-header {
+  padding-top: 7rem;
+  padding-bottom: 0;
+}
+
+.contact-container {
+  align-items: center; /* Center items horizontally */
+}
+
+.contact-form-header {
+  padding-bottom: 2rem;
+  font-size: 18px;
+  color: #fafbfc;
+}
+
+.contact-form-header-email {
+  color: #36c2ce;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  background: #24292e; /* Background color for form */
+  padding: 2rem; /* Padding for form */
+  align-items: center; /* Center items horizontally */
+
+  border-radius: 10px; /* Border radius for form */
+  color: #fafbfc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 7px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 220, 220);
+  margin-top: 0.5rem;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border: 2px solid #36c2ce;
+}
+
+.contact-form-container input[type="submit"] {
+  margin-top: 2rem;
+  cursor: pointer;
+  background: #36c2ce;
+  color: white;
+  border: none;
+}
+
+/* Responsive Styles */
+
+/* For screens with max-width 900px */
+@media only screen and (max-width: 900px) {
   #contact {
-    padding-top: 40rem; /* Adjust padding for smaller screens */
+    padding: 1rem; /* Reduce padding to fit smaller screens */
   }
+
+  #contact .section-header {
+    padding-top: 5rem; /* Adjust padding for header */
+  }
+
+  .contact-container {
+    align-items: center;
+  }
+  .contact-form-header {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .contact-form-container {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+  }
+}
+
+/* For screens with max-width 400px */
+@media only screen and (max-width: 450px) {
+  #contact .section-header {
+    padding-top: 40rem; /* Adjust padding for header */
+    text-align: left; /* Align header text to the left */
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .contact-form-header {
+    font-size: 14px; /* Further adjust font size for very small screens */
+  }
+
+  .contact-form-container {
+    padding: 1rem; /* Further reduce padding for very small screens */
+    max-width: 100%; /* Ensure container fits screen */
+  }
+
+  .contact-form-container input,
+  .contact-form-container textarea {
+    padding: 5px; /* Reduce padding inside form elements */
+  }
+
+  .contact-form-container input[type="submit"] {
+    margin-top: 1.5rem; /* Adjust margin for submit button */
+  }
+}
+
+#footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fafbfc;
 }
