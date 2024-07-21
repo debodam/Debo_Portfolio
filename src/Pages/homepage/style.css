@@ -455,7 +455,6 @@ body::-webkit-scrollbar {
 
 .card-tech a {
   text-decoration: none;
-  color: #007bff;
 }
 
 .card-tech a:hover {
@@ -588,6 +587,26 @@ body::-webkit-scrollbar {
 
   .hero_pic_container {
     padding-bottom: 2rem;
+  }
+
+  .btn-1:hover,
+  .btn-2:hover {
+    cursor: pointer;
+  }
+
+  .btn-1:hover {
+    background: #36c2ce;
+    color: white;
+  }
+
+  .btn-2 {
+    background: #000;
+    color: white;
+  }
+
+  .btn-2:hover {
+    background: #36c2ce;
+    color: #000;
   }
 
   .about-image img {
