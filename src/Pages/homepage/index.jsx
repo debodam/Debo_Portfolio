@@ -1,14 +1,13 @@
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import FolderOpenRoundedIcon from "@mui/icons-material/FolderOpenRounded";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 import resume from "../../Assets/2024_Software_Engineering_Resume.pdf";
-import DriveAwake from "../../Assets/DriveAwake.png";
-import github from "../../Assets/github.png";
-import linkedin from "../../Assets/linkedin.png";
 import Debo from "../../Assets/ProfileImage.png";
-import TinyThreads from "../../Assets/TinyThreads.png";
-import ExternalLinks from "../../Components/externallinks/index"; // Adjust path as needed
+import ExternalLinks from "../../Components/externallinks/index";
+import JobList from "../../Components/joblist";
 import Navbar from "../../Components/navbar";
 import "./style.css"; // Ensure your custom styles are correct
 
@@ -21,37 +20,6 @@ const Homepage = () => {
     "Javascript ES6+",
     "SQL",
   ];
-
-  const spotlightProjects = {
-    TinyThreads: {
-      title: "TinyThreads",
-      desc: "A third-person survival-mode game where you battle against time and space to return to Earth.",
-      techStack: "H",
-      link: "https://github.com/slakh96/no-mans-land",
-      image: TinyThreads,
-    },
-    DriveAwake: {
-      title: "DriveAwake",
-      desc: "A third-person survival-mode game where you battle against time and space to return to Earth.",
-      techStack: "H",
-      link: "https://github.com/slakh96/no-mans-land",
-      image: DriveAwake,
-    },
-    Subway: {
-      title: "Subway",
-      desc: "A third-person survival-mode game where you battle against time and space to return to Earth.",
-      techStack: "H",
-      link: "https://github.com/slakh96/no-mans-land",
-      image: Debo,
-    },
-    EMR: {
-      title: "EMR",
-      desc: "A third-person survival-mode game where you battle against time and space to return to Earth.",
-      techStack: "H",
-      link: "https://github.com/slakh96/no-mans-land",
-      image: Debo,
-    },
-  };
 
   const projects = {
     "Dynamic Subway Information System": {
@@ -87,45 +55,147 @@ const Homepage = () => {
     },
   };
 
+  const isHorizontal = window.innerWidth < 600;
+
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    if (isHorizontal) {
+      return (
+        <div
+          role="tabpanel"
+          hidden={value !== index}
+          id={`full-width-tabpanel-${index}`}
+          aria-labelledby={`full-width-tab-${index}`}
+          {...other}>
+          {value === index && <div style={{ padding: 24 }}>{children}</div>}
+        </div>
+      );
+    } else {
+      return (
+        <div
+          role="tabpanel"
+          hidden={value !== index}
+          id={`vertical-tabpanel`}
+          {...other}>
+          {value === index && <div style={{ padding: 24 }}>{children}</div>}
+        </div>
+      );
+    }
+  }
+
+  function a11yProps(index) {
+    if (isHorizontal) {
+      return {
+        id: `full-width-tab-${index}`,
+        "aria-controls": `full-width-tabpanel-${index}`,
+      };
+    } else {
+      return {
+        id: `vertical-tab-${index}`,
+      };
+    }
+  }
+
+  const [value, setValue] = React.useState(0);
+
+  const experienceItems = {
+    Amazon: {
+      jobTitle: "Software Development Engineer @",
+      duration: "JUL 2022 - PRESENT",
+      desc: [
+        "Led development of end-to-end region build automation across Route 53 (AWS's DNS web service). This enabled the launch of customer-facing global services in new regions within a day, a significant reduction from the previous time-frame of a month.",
+        "Re-built Route 53's core domain management and DNS systems to provide a better user experience to millions of customers.",
+      ],
+    },
+    Wattpad: {
+      jobTitle: "Associate Engineer @",
+      duration: "MAY 2020 - APR 2021",
+      desc: [
+        "Developed a responsive React web page (the new Story Details) from scratch, both on client and server side, for an app with massive scale (2 billion daily requests).",
+        "Iteratively built web experiences for 80 million users across high-traffic pages.",
+        "Collaborated with senior engineers and product management following best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations.",
+      ],
+    },
+    "University of Toronto": {
+      jobTitle: "Research Engineer @",
+      duration: "MAY 2021 - SEPT 2021",
+      desc: [
+        "Developed and researched an NLP-based framework using state-of-the-art tools like Spacy and Stanza to facilitate the derivation of requirements from health data by leveraging syntactic dependencies, entity-recognition and rule-based match-making.",
+        "Application selected for DCS Research Award ($4,000) as part of the ”Visualizing Privacy Analysis Results” project led by Professor Marsha Chechik.",
+      ],
+    },
+    Centivizer: {
+      jobTitle: "Software Developer @",
+      duration: "SEPT 2019 - APR 2020",
+      desc: [
+        "Developed interactive and neural-activation technologies to stimulate physical and cognitive functions in order to slow the progression of neurodegenerative disorders.",
+        "Leveraged WebRTC to develop and maintain a Node.js online video-streaming platform in real-time competitive-mode games to research the effects of active stimulation for those suffering from dementia.",
+      ],
+    },
+    // TDSB: {
+    //   jobTitle: "Software Engineer @",
+    //   duration: "SEPT 2019 - DEC 2020",
+    //   desc: [
+    //     "Co-developed homework management software integrable with Google Classroom by utilizing the Python’s Flask micro-framework for the back-end API and Vue.js for the front-end UI, in order to translate business requirements into a functional full-stack application."
+    //   ]
+    // },
+    "Orange Gate": {
+      jobTitle: "Software Developer Intern @",
+      duration: "MAY 2019 - AUG 2019",
+      desc: [
+        "Developed a Node.js smart home system through Facebook’s Messenger integrated with Bocco sensors and other smart devices (Nest camera, TPLink smart plugs) to derive conclusions about the current state of the home",
+        "Identified continuous improvements in data quality, design reports and coding activities, presenting results and findings to internal business stakeholders.",
+        "Relevant technologies/tools used: DialogFlow, Vision, AutoML, Messenger Bot API, MongoDB.",
+      ],
+    },
+  };
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <div>
       <Navbar />
       {/* Hero Section */}
-      <div className="hero section">
-        <div className="hero_text">
-          <h1 className="hero_h1">
-            Hi, I'm <span className="hero_name">Debo</span>!
-          </h1>
-          <h3 className="hero_subheader">
-            Sometimes I like to turn ideas into reality.
-          </h3>
-          <div className="btn-container">
-            <a href={resume} target="_blank" rel="noopener noreferrer">
-              <button className="btn-1">
-                Resume
-                <InsertDriveFileIcon className="file-icon" />
-              </button>
-            </a>
-            <a href="mailto:debojeetdam.business@gmail.com">
-              <button className="btn-2">
-                Email
-                <EmailRoundedIcon className="email-icon" />
-              </button>
-            </a>
-          </div>
-          <div className="socials_container">
-            <a
-              href="https://github.com/debodam"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img className="icon" src={github} alt="GitHub" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/debojeetdam"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img className="icon" src={linkedin} alt="LinkedIn" />
-            </a>
+      <div id="hero">
+        <div className="hero section">
+          <div className="hero_text">
+            <h1 className="hero_h1">
+              Hi, I'm <span className="hero_name">Debo</span>!
+            </h1>
+            <h3 className="hero_subheader">
+              Sometimes I like to turn ideas into reality.
+            </h3>
+            <div className="btn-container">
+              <a href={resume} target="_blank" rel="noopener noreferrer">
+                <button className="btn-1">
+                  Resume
+                  <InsertDriveFileIcon className="file-icon" />
+                </button>
+              </a>
+              <a href="mailto:debojeetdam.business@gmail.com">
+                <button className="btn-2">
+                  Email
+                  <EmailRoundedIcon className="email-icon" />
+                </button>
+              </a>
+            </div>
+            <div className="socials_container">
+              <a
+                href="https://github.com/debodam"
+                target="_blank"
+                rel="noopener noreferrer">
+                <GitHubIcon style={{ fontSize: 35, color: "#fff" }} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/debojeetdam"
+                target="_blank"
+                rel="noopener noreferrer">
+                <LinkedInIcon style={{ fontSize: 37, color: "#fff" }} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -167,38 +237,6 @@ const Homepage = () => {
 
       {/* Projects Section */}
       <div id="projects">
-        {/* <div className="section-header">
-          <span className="section-title">/ spotlight projects</span>
-        </div> */}
-        {/* <Carousel>
-          {Object.keys(spotlightProjects).map((key, i) => (
-            <Carousel.Item className="carousel-item-custom" key={i}>
-              <div className="carousel-inner">
-                <img
-                  className="d-block w-100"
-                  src={spotlightProjects[key]["image"]}
-                  alt={key}
-                />
-                <div className="carousel-content">
-                  <h3>
-                    <strong>{spotlightProjects[key]["title"]}</strong>
-                  </h3>
-                  <p>
-                    {spotlightProjects[key]["desc"]}
-                    <span className="techStack">
-                      <strong>{spotlightProjects[key]["techStack"]}</strong>
-                    </span>
-                  </p>
-                  <ExternalLinks
-                    githubLink={spotlightProjects[key]["link"]}
-                    openLink={spotlightProjects[key]["open"]}
-                  />
-                </div>
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel> */}
-
         <div className="section-header">
           <span className="section-title">/ projects</span>
         </div>
@@ -208,7 +246,9 @@ const Homepage = () => {
               <li className="projects-card" key={i}>
                 <div className="card-header">
                   <div className="folder-icon">
-                    <FolderOpenRoundedIcon style={{ fontSize: 35 }} />
+                    <FolderOpenRoundedIcon
+                      style={{ fontSize: 35, color: "#36c2ce" }}
+                    />
                   </div>
                   <ExternalLinks
                     githubLink={projects[key]["link"]}
@@ -226,6 +266,21 @@ const Homepage = () => {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      {/* Experience Section */}
+      <div id="experience">
+        <div className="section-header">
+          <span className="section-title">/ experience</span>
+        </div>
+        <JobList />
+      </div>
+
+      {/* Contact Section */}
+      <div id="contact">
+        <div className="section-header">
+          <span className="section-title">/ contact</span>{" "}
         </div>
       </div>
     </div>

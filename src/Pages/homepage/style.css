@@ -419,3 +419,297 @@ body::-webkit-scrollbar {
 .card-tech a:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 788px) {
+  .about-image img {
+    max-width: 200px;
+  }
+
+  .about-image:hover {
+    transform: translateY(-7px);
+  }
+
+  .hero .hero_text {
+    text-align: center;
+  }
+
+  .hero_h1 {
+    font-size: 36px;
+  }
+
+  .hero_name {
+    font-size: 36px;
+  }
+
+  .hero_subheader {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .btn-1,
+  .btn-2 {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .socials_container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  #about {
+    height: unset;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30%;
+  }
+
+  .about-description {
+    font-size: 18px;
+  }
+
+  .about-description a,
+  .about-description b {
+    font-size: 17px;
+  }
+
+  .about-image img {
+    display: none;
+  }
+
+  .about-content {
+    display: unset;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projects-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .card-desc {
+    font-size: 16px;
+  }
+
+  .card-tech {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    min-height: unset;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image img {
+    display: none;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projects-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .card-desc {
+    font-size: 16px;
+  }
+
+  .card-tech {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+#experience {
+  min-height: 50vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+}
+
+.joblist-job-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #eeeeee;
+}
+
+.joblist-job-company {
+  font-size: 28px;
+  color: #36c2ce;
+  font-weight: bold;
+}
+
+.joblist-duration {
+  font-family: "NTR", sans-serif;
+  font-size: 18px;
+  color: #fafbfc;
+  padding-top: 1.5rem;
+}
+
+#vertical-tabpanel {
+  margin-top: -28px;
+  padding-left: 25px;
+}
+
+.MuiTab-wrapper {
+  font-size: 16px;
+  text-align: left;
+  align-items: flex-start !important;
+}
+
+.MuiButtonBase-root {
+  outline: none !important;
+  color: #fafbfc !important;
+}
+
+.PrivateTabIndicator-colorSecondary-5 {
+  color: #36c2ce !important;
+}
+.jss5 {
+  color: #36c2ce !important;
+}
+.makeStyles-tabs-2 {
+  border-right: 1px solid #36c2ce !important;
+}
+#experience .MuiTab-root {
+  padding: 6px 20px;
+}
+.MuiButtonBase-root:focus {
+  color: #36c2ce !important;
+}
+
+/* Your CSS file */
+.css-10d9dml-MuiTabs-indicator {
+  background-color: #36c2ce !important; /* Change the color */
+}
+
+ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+.css-19kzrtu {
+  /* Adjust these values as needed */
+  margin-top: -25px; /* Moves the box up by 20px */
+  padding-top: 10px; /* Optional: Adds padding at the top if needed */
+}
+
+.job-description li::before {
+  content: "▹    ";
+  color: #36c2ce;
+  position: absolute;
+  left: 0;
+}
+
+.job-description li {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 16px;
+  font-size: 18px;
+  color: #fafbfc;
+}
+
+.job-description {
+  padding-top: 24px;
+  max-width: 650px;
+  font-size: 20px;
+}
+
+.job-description a,
+.job-description b {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  #experience {
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .jss1 {
+    height: unset !important;
+    flex-direction: column !important;
+  }
+
+  .makeStyles-root-1 {
+    height: unset !important;
+    width: unset;
+    flex-direction: column;
+  }
+
+  .joblist-job-title {
+    font-size: 22px;
+  }
+
+  .joblist-job-company {
+    font-size: 22px;
+  }
+}
+
+#contact {
+  padding-top: 7rem;
+}
+
+/* Styles for smaller screens, such as iPhones */
+@media only screen and (max-width: 600px) {
+  #contact {
+    padding-top: 40rem; /* Adjust padding for smaller screens */
+  }
+}

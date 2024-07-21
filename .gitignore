@@ -21,3 +21,39 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+      {/* Projects Section */}
+      <div id="projects">
+        {/* <div className="section-header">
+          <span className="section-title">/ spotlight projects</span>
+        </div> */}
+        {/* <Carousel>
+          {Object.keys(spotlightProjects).map((key, i) => (
+            <Carousel.Item className="carousel-item-custom" key={i}>
+              <div className="carousel-inner">
+                <img
+                  className="d-block w-100"
+                  src={spotlightProjects[key]["image"]}
+                  alt={key}
+                />
+                <div className="carousel-content">
+                  <h3>
+                    <strong>{spotlightProjects[key]["title"]}</strong>
+                  </h3>
+                  <p>
+                    {spotlightProjects[key]["desc"]}
+                    <span className="techStack">
+                      <strong>{spotlightProjects[key]["techStack"]}</strong>
+                    </span>
+                  </p>
+                  <ExternalLinks
+                    githubLink={spotlightProjects[key]["link"]}
+                    openLink={spotlightProjects[key]["open"]}
+                  />
+                </div>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel> */}

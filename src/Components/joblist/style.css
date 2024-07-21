@@ -1,0 +1,93 @@
+.experience-tab {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: bold;
+  color: #ddd;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.experience-tab:hover,
+.experience-tab:focus {
+  color: var(--green-bright);
+  background-color: var(--lightest-slate);
+}
+
+.experience-tab-active {
+  color: var(--green-bright);
+  border-bottom: 2px solid var(--green-bright);
+  font-weight: bold;
+}
+
+#vertical-tabpanel {
+  margin-top: -28px;
+  padding-left: 25px;
+}
+
+.MuiTab-wrapper {
+  font-size: 16px;
+  text-align: left;
+  align-items: flex-start !important;
+  font-family: "NTR", sans-serif;
+}
+
+.MuiButtonBase-root {
+  outline: none !important;
+  color: var(--lightest-slate) !important;
+}
+
+.PrivateTabIndicator-colorSecondary-5 {
+  background-color: var(--green-bright) !important;
+}
+
+.jss5 {
+  background-color: var(--green-bright) !important;
+}
+
+.makeStyles-tabs-2 {
+  border-right: 1px solid var(--lightest-navy) !important;
+}
+
+#experience .MuiTab-root {
+  padding: 6px 20px;
+}
+
+.MuiButtonBase-root:focus {
+  color: var(--green-bright) !important;
+}
+
+ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+.job-description li::before {
+  content: "▹    ";
+  color: var(--green-bright);
+  position: absolute;
+  left: 0;
+}
+
+.job-description li {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 16px;
+  font-size: 18px;
+  color: var(--slate);
+}
+
+.job-description {
+  padding-top: 24px;
+  max-width: 650px;
+  font-family: "NTR", sans-serif;
+  font-size: 20px;
+}
+
+.job-description a,
+.job-description b {
+  font-size: 19px;
+  font-weight: bold;
+}
