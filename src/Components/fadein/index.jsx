@@ -19,9 +19,17 @@ export default function FadeInSection(props) {
       { threshold: 0.1 }
     ); // Adjust threshold as needed
 
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
-  }, []);
+    const currentRef = domRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []); // Empty dependency array ensures this runs once on mount and cleanup on unmount
 
   return (
     <div
