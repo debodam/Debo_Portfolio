@@ -55,7 +55,7 @@ const Homepage = () => {
       link: "https://github.com/debodam/Disaster-Relief-System",
     },
     "Museum Management System": {
-      desc: "A management system for a museum that keeps track of artists and their art.",
+      desc: "A management system for a musuem that keeps track of artists and their art.",
       techStack: "Python, SQL",
       link: "https://github.com/debodam/Museum-Management-System",
     },
@@ -64,6 +64,54 @@ const Homepage = () => {
       techStack: "C",
       link: "https://github.com/debodam/Automated-Indoor-Garden-Arduino-Code",
     },
+  };
+
+  const isHorizontal = window.innerWidth < 600;
+
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    if (isHorizontal) {
+      return (
+        <div
+          role="tabpanel"
+          hidden={value !== index}
+          id={`full-width-tabpanel-${index}`}
+          aria-labelledby={`full-width-tab-${index}`}
+          {...other}>
+          {value === index && <div style={{ padding: 24 }}>{children}</div>}
+        </div>
+      );
+    } else {
+      return (
+        <div
+          role="tabpanel"
+          hidden={value !== index}
+          id={`vertical-tabpanel`}
+          {...other}>
+          {value === index && <div style={{ padding: 24 }}>{children}</div>}
+        </div>
+      );
+    }
+  }
+
+  function a11yProps(index) {
+    if (isHorizontal) {
+      return {
+        id: `full-width-tab-${index}`,
+        "aria-controls": `full-width-tabpanel-${index}`,
+      };
+    } else {
+      return {
+        id: `vertical-tab-${index}`,
+      };
+    }
+  }
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
 
   return (

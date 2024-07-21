@@ -733,6 +733,14 @@ ul {
     padding-right: unset;
   }
 
+  .MuiButtonBase-root {
+    padding-bottom: 1rem;
+  }
+
+  .css-1aquho2-MuiTabs-indicator {
+    background-color: #36c2ce !important;
+  }
+
   .jss1 {
     height: unset !important;
     flex-direction: column !important;
@@ -750,6 +758,30 @@ ul {
 
   .joblist-job-company {
     font-size: 22px;
+  }
+
+  .MuiTabs-root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .MuiTabs-flexContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .MuiTab-root {
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: center;
+  }
+
+  .css-10d9dml-MuiTabs-indicator {
+    background-color: #36c2ce !important; /* Change the color */
   }
 }
 
@@ -848,7 +880,7 @@ ul {
 /* For screens with max-width 400px */
 @media only screen and (max-width: 450px) {
   #contact .section-header {
-    padding-top: 40rem; /* Adjust padding for header */
+    padding-top: 30rem; /* Adjust padding for header */
     text-align: left; /* Align header text to the left */
     width: 100%; /* Ensure it takes full width */
   }

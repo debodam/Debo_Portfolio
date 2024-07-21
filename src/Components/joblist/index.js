@@ -4,16 +4,7 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
-import React from "react";
-
-const isHorizontal = window.innerWidth < 600;
-
-// Styled components
-const Root = styled("div")({
-  flexGrow: 1,
-  display: "flex",
-  height: 300,
-});
+import React, { useEffect, useState } from "react";
 
 const TabPanelStyled = styled("div")({
   padding: 24,
@@ -21,14 +12,12 @@ const TabPanelStyled = styled("div")({
 
 const TabsStyled = styled(Tabs)(({ theme }) => ({
   borderRight: `1px solid ${theme.palette.divider}`,
-  // Hide scroll buttons
   "& .MuiTabs-scrollable": {
     overflowX: "auto",
   },
   "& .MuiTabs-scrollButtons": {
     display: "none",
   },
-  // Customize scroll color
   "&::-webkit-scrollbar": {
     width: "8px",
     color: "#36c2ce",
@@ -75,7 +64,17 @@ function a11yProps(index) {
 }
 
 const JobList = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [isHorizontal, setIsHorizontal] = useState(window.innerWidth < 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsHorizontal(window.innerWidth < 600);
+    };
+    window.addEventListener("resize", handleResize);
+    // Cleanup on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const experienceItems = {
     "UCalgary Students' Union": {
@@ -115,9 +114,14 @@ const JobList = () => {
   };
 
   return (
-    <Root>
+    <div
+      style={{
+        display: "flex",
+        height: 300,
+        flexDirection: isHorizontal ? "column" : "row",
+      }}>
       <TabsStyled
-        orientation={!isHorizontal ? "vertical" : "horizontal"}
+        orientation={isHorizontal ? "horizontal" : "vertical"}
         variant={isHorizontal ? "fullWidth" : "scrollable"}
         value={value}
         onChange={handleChange}>
@@ -145,7 +149,7 @@ const JobList = () => {
           </ul>
         </TabPanel>
       ))}
-    </Root>
+    </div>
   );
 };
 
