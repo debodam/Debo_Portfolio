@@ -46,7 +46,7 @@ const Homepage = () => {
     },
     DriveAwake: {
       desc: "A driving assistance application that measures EOG signals to alert users when they feel sleepy.",
-      techStack: "React.js, Flask, C",
+      techStack: "React.js, Flask, C, Docker",
       link: "https://github.com/debodam/nathacks2023",
     },
     "Disaster Relief System": {
