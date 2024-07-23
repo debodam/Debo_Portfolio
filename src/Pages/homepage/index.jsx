@@ -49,6 +49,11 @@ const Homepage = () => {
       techStack: "React.js, Flask, C, Docker",
       link: "https://github.com/debodam/nathacks2023",
     },
+    "Hand Gesture Controlled Bionic Arm": {
+      desc: "Arduino servos controlled by hand gestures detected with OpenCV.",
+      techStack: "C, Python, OpenCV, Arduino",
+      link: "https://github.com/debodam/Myoelectric-Prosthesis-Hand-Gesture-Recognition",
+    },
     "Disaster Relief System": {
       desc: "A Java application that manages the data of disaster victims.",
       techStack: "Java, MySQL",
@@ -58,11 +63,6 @@ const Homepage = () => {
       desc: "A management system for a musuem that keeps track of artists and their art.",
       techStack: "Python, SQL",
       link: "https://github.com/debodam/Museum-Management-System",
-    },
-    "Arduino Automatic Garden Program": {
-      desc: "A self-automated garden system that tracks soil moisture and temperature",
-      techStack: "C",
-      link: "https://github.com/debodam/Automated-Indoor-Garden-Arduino-Code",
     },
   };
 
