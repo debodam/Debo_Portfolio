@@ -84,7 +84,7 @@ const JobList = () => {
       jobTitle: "Faculty Representative: Schulich School of Engineering @",
       duration: "MAR 2024 - PRESENT",
       desc: [
-        "Elected in the 2024 Students’ Union election with 489 votes. Represented 4,200+ engineering students and collaborated with the faculty dean to enhance education",
+        "Elected in the 2024 Students’ Union election with 489 votes. Represented 4,200+ engineering students and collaborated with the faculty dean to enhance education.",
         "Successfully passed a referendum, achieving a significant 33% reduced fee assessment for co-op and internship students compared to full-time student rates.",
         "Developed and implemented comprehensive bylaws and policies for membership, elections, governance, and meetings.",
       ],
