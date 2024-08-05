@@ -30,7 +30,7 @@ const TabsStyled = styled(Tabs)(({ theme }) => ({
     color: "#36c2ce",
   },
   "& .MuiTabs-indicator": {
-    backgroundColor: "#36c2ce", // Your custom color here
+    backgroundColor: "#36c2ce",
   },
 }));
 

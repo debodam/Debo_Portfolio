@@ -36,7 +36,7 @@ const Homepage = () => {
     "Dynamic Subway Information System": {
       desc: "A Java application that simulates subway screens with real-time train data and advertisements.",
       techStack: "Java, MySQL",
-      link: "https://github.com/debodam/Dynamic-Subway-Information-System",
+      link: "https://github.com/arnavmittal14/ENSF380SummerFinalProject",
     },
     TinyThreads: {
       desc: "A full-stack children’s clothing donation and trading market application.",
