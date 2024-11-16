@@ -80,6 +80,15 @@ const JobList = () => {
   }, []);
 
   const experienceItems = {
+    "Techstart": {
+      jobTitle: "Product Manager",
+      duration: "SEPT 2024 - PRESENT",
+      desc: [
+        "Spearheaded the development of a 2D story-based platformer game centered on sustainability awareness using Unity and C#, successfully managing a team of 8 to deliver a high-quality product, projected for launch on Steam.",
+        "Implemented Agile frameworks, conducting bi-weekly sprint planning, which led to a 30% increase in team productivity.",
+        "Developed and implemented comprehensive bylaws and policies for membership, elections, governance, and meetings.",
+      ],
+    },
     "UCalgary Students' Union": {
       jobTitle: "Faculty Representative: Schulich School of Engineering @",
       duration: "MAR 2024 - PRESENT",
@@ -104,14 +113,6 @@ const JobList = () => {
       desc: [
         "Mentored students, imparting foundational knowledge of frontend development through HTML/CSS and JavaScript.",
         "Guided students on basic networking principles and backend developement fundamentals using Node.js.",
-      ],
-    },
-    "Engineering Students' Society": {
-      jobTitle: "First Year Representative @",
-      duration: "SEPT 2022 - APR 2023",
-      desc: [
-        "Represented 1000+ students at the University of Calgary, demonstrating leadership in community engagement through the organization of various school-wide engineering events.",
-        "Improved the first year curriculum through monthly feedback presented during meetings with academic coordinators.",
       ],
     },
   };
