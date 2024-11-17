@@ -81,12 +81,11 @@ const JobList = () => {
 
   const experienceItems = {
     "Techstart": {
-      jobTitle: "Product Manager",
+      jobTitle: "Product Manager @",
       duration: "SEPT 2024 - PRESENT",
       desc: [
         "Spearheaded the development of a 2D story-based platformer game centered on sustainability awareness using Unity and C#, successfully managing a team of 8 to deliver a high-quality product, projected for launch on Steam.",
         "Implemented Agile frameworks, conducting bi-weekly sprint planning, which led to a 30% increase in team productivity.",
-        "Developed and implemented comprehensive bylaws and policies for membership, elections, governance, and meetings.",
       ],
     },
     "UCalgary Students' Union": {
