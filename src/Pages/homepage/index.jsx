@@ -5,7 +5,7 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import resume from "../../Assets/2024_Software_Engineering_Resume.pdf";
+import resume from "../../Assets/2025_Software_Engineering_Resume.pdf";
 import heroPic from "../../Assets/debo_profile_picture_2.png";
 import Debo from "../../Assets/ProfileImage.png";
 import Contact from "../../Components/contact";

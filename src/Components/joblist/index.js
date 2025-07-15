@@ -92,7 +92,7 @@ const JobList = () => {
     },
     "Techstart": {
       jobTitle: "Product Manager @",
-      duration: "SEPT 2024 - PRESENT",
+      duration: "SEPT 2024 - MAY 2025",
       desc: [
         "Spearheaded the development of a 2D story-based platformer game centered on sustainability awareness using Unity and C#, successfully managing a team of 9 to deliver a high-quality product.",
         "Utilized Jira to organize and track project tasks, manage sprint backlogs, and monitor team progress, ensuring efficient issue resolution and transparency across all development stages.",
@@ -102,7 +102,7 @@ const JobList = () => {
     },
     "UCalgary Students' Union": {
       jobTitle: "Faculty Representative: Schulich School of Engineering @",
-      duration: "MAR 2024 - PRESENT",
+      duration: "MAY 2024 - MAY 2025",
       desc: [
         "Elected in the 2024 Students’ Union election with 489 votes. Represented 4,200+ engineering students and collaborated with the faculty dean to enhance education.",
         "Successfully passed a referendum, achieving a significant 33% reduced fee assessment for co-op and internship students compared to full-time student rates.",
