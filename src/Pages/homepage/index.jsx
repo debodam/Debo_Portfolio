@@ -6,7 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import resume from "../../Assets/2024_Software_Engineering_Resume.pdf";
-import heroPic from "../../Assets/debo_profile_picture.png";
+import heroPic from "../../Assets/debo_profile_picture_2.png";
 import Debo from "../../Assets/ProfileImage.png";
 import Contact from "../../Components/contact";
 import ExternalLinks from "../../Components/externallinks/index";
@@ -24,12 +24,12 @@ const Homepage = () => {
   });
 
   const tech_stack = [
+    ".NET 8",
+    "Blazor",
     "Java",
     "Python",
     "React.js",
-    "C",
-    "Javascript ES6+",
-    "SQL",
+    "C#"
   ];
 
   const projects = {
@@ -132,7 +132,15 @@ const Homepage = () => {
           <div className="about-content">
             <div className="about-description">
               <p>
-                I'm currently a third-year engineering student at the{" "}
+                Currently, I'm a <b className="highlight-2">Software Developer Intern </b>
+                over at{" "}
+                <a
+                  className="highlight-1 no-underline"
+                  href="https://www.arcurve.com/">
+                  Arcurve
+                </a>
+                !
+                I just wrapped up my third-year at the{" "}
                 <a
                   className="highlight-1 no-underline"
                   href="https://schulich.ucalgary.ca/">
@@ -158,6 +166,16 @@ const Homepage = () => {
               <img className="Debo_pic" src={Debo} alt="Debo" />
             </div>
           </div>
+        </div>
+      </FadeInSection>
+
+      {/* Experience Section */}
+      <FadeInSection>
+        <div id="experience">
+          <div className="section-header">
+            <span className="section-title">/ experience</span>
+          </div>
+          <JobList />
         </div>
       </FadeInSection>
 
@@ -194,16 +212,6 @@ const Homepage = () => {
               ))}
             </ul>
           </div>
-        </div>
-      </FadeInSection>
-
-      {/* Experience Section */}
-      <FadeInSection>
-        <div id="experience">
-          <div className="section-header">
-            <span className="section-title">/ experience</span>
-          </div>
-          <JobList />
         </div>
       </FadeInSection>
 
