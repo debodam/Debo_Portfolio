@@ -3,7 +3,6 @@ import FolderOpenRoundedIcon from "@mui/icons-material/FolderOpenRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import resume from "../../Assets/2025_Software_Engineering_Resume.pdf";
 import heroPic from "../../Assets/debo_profile_picture_2.png";
@@ -84,7 +83,7 @@ const Homepage = () => {
                 </span>
               </h1>
               <h3 className="hero_subheader">
-                Sometimes I like to turn{" "}
+                I like to turn{" "}
                 <span className="hero_subheader_ideas"> ideas </span> into
                 <span className="hero_subheader_reality"> reality</span>.
               </h3>
